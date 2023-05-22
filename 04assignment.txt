@@ -1,0 +1,119 @@
+MODULE: 4 (JavaScript Basic & DOM) /JavaScript Essentials And Advanced
+
+1.What is JavaScript? 
+	JavaScript is the Programming Language for the Web.
+	JavaScript can update and change both HTML and CSS.
+	JavaScript can calculate, manipulate and validate data.
+	JavaScript is a scripting language that enables you to dynamically update content, control multimedia, animate images, and pretty much everything else.
+
+2.What is the use of isNaN function?
+	The JavaScript isNaN () Function is used to check whether a given value is an illegal number or not.
+   	It returns true if the value is a NaN else returns false.
+   	It is different from the Number.isNaN () Method.
+
+3. What is negative Infinity?
+	The negative infinity in JavaScript is a constant value that is used to represent a value that is the lowest available.
+	JavaScript shows the NEGATIVE_INFINITY value as -Infinity.
+
+4. Which company developed JavaScript?
+	JavaScript was invented by Brendan Eich in 1995. It was developed for Netscape 2, and became the ECMA-262 standard in 1997. 
+	After Netscape handed JavaScript over to ECMA, the Mozilla foundation continued to develop JavaScript for the Firefox browser.
+
+5. What are undeclared and undefined variables?
+	Undefined: It occurs when a variable has been declared but has not been assigned any value. Undefined is not a keyword. 
+	Undeclared: It occurs when we try to access any variable that is not initialized or declared earlier using the var or const keyword.
+	If we use ‘typeof’ operator to get the value of an undeclared variable, we will face the runtime error with the return value as “undefined”. 
+
+6. Write the code for adding new elements dynamically? 
+	New elements can be dynamically created in JavaScript with the help of createElement() method.
+
+7. What is the difference between ViewState and SessionState? 
+	SessionState : 
+		Can be persisted in memory, which makes it a  fast solution. 
+		Which means state cannot be shared in the Web Farm/Web Garden.
+		Can be persisted in a Database, useful for Web Farms / Web Gardens.
+		Is Cleared when the session dies - usually after 20min of inactivity.
+	ViewState : 
+		Is sent back and forth between the server and client,taking up bandwidth.
+		Has no expiration date.
+		Is useful in a Web Farm / Web Garden
+
+8. What is === operator?
+	The === operator means "is exactly equal to," matching by both value and data type
+	An operator is a sign or symbol that specifies the type  of calculation to perform within an expression. 
+	The strict equality ( === ) operator checks whether its two operands are equal, returning a Boolean result. Unlike the equality operator, the strict equality operator always considers operands of different types to be different.
+
+9. How can the style/class of an element be changed? 
+ 	There are two common approaches that allow us to achieve this task.
+	1.Style.property		
+	2.Changing the class itself
+
+	1.Style.property
+		Approach 1: Changing CSS with the help of the style property:
+	Syntax:	
+		document.getElementById("id").style.property = new_style
+	2. Changing the class itself
+		The class name is used as a selector in HTML which helps to give some value to the element attributes. The document.getElementById() method is used to return the element in the document with the “id” attribute and the “className” attribute can be used to change/append the class of the element.
+
+10. How to read and write a file using JavaScript? 
+	Files can be read and written by using java script functions – fopen(),fread() and fwrite().
+	The function fopen() takes two parameters – 1. Path and 2. Mode (0 for reading and 3 for writing).
+	The fopen() function returns -1, if the file is successfully opened.
+	Example:
+		file=fopen(getScriptPath(),0);
+
+	The function fread() is used for reading the file content.
+	Example:
+		str = fread(file,flength(file) ;
+ 
+	The function fwrite() is used to write the contents to the file.
+	Example:
+		file = fopen("c:\MyFile.txt", 3);// opens the file for writing
+		fwrite(file, str);// str is the content that is to be written into the file.
+
+11.  What are all the looping structures in JavaScript? 
+	JavaScript supports different kinds of loops:
+	for - loops through a block of code a number of times
+	for/in - loops through the properties of an object
+	for/of - loops through the values of an iterable object
+	while - loops through a block of code while a specified condition is true
+	do/while - also loops through a block of code while a specified condition is true
+	
+12. How can you convert the string of any base to an integer in JavaScript? 
+	also  For performing the above-illustrated task, we would be using a method (or a function) provided by JavaScript called as parseInt(). 
+	This is a special method, provided by JavaScript, that takes an integer value (of any base which is either specified or not) and further converts the string into an integer value.
+    	String          Integer
+    	"1002"            1002
+
+13.  What is the function of the delete operator? 
+ 	The delete operator is the reverse process of a new operator. It deallocates all the memory allocated for an object. The object can be of any type. The delete operator completely destroys an object so that the resources can be used for other purposes.
+	If the property's value is an object and there are no more references to the object, the object held by that property is eventually released automatically.
+    	Syntax: delete object.property
+    	delete object[property]
+
+14.  What are all the types of Pop up boxes available in JavaScript?
+	Alert Box: window.alert("sometext");
+   	Confirm Box: window.confirm("sometext");
+   	Prompt Box: window.prompt("sometext","defaultText");
+   	Line Breaks: alert("Hello\nHow are you?");
+
+15.  What is the use of Void (0)? 
+	JavaScript void 0 means returning undefined (void) as a primitive value. You might come across the term “JavaScript:void(0)” while going through HTML documents. It is used to prevent any side effects caused while inserting an expression in a web page
+	To prevent the default behavior of a web page, you might face problems while using javascript: void(0) to React. For this JavaScript library, you can use the event. preventDefault() method. You can call this method from the onClick event.
+
+16.  How can a page be forced to load another page in JavaScript? 
+	In JavaScript, we can use window.location object to force a page to load another page. We can use the location object to set the URL of a new page. There are different ways – window.location.href property, window.location.assign() and window.location.replace() methods, to set the URL of a new page using the location object. We will discuss each of the property and methods in detail in this tutorial.
+	Window.location.replace
+	The first way is to use the window.location.href property. This property contains information about the current URL of the page, and it can be used to redirect the user to a new page.
+	Syntax
+		window.location.href = "new_url";
+
+17.  What are the disadvantages of using innerHTML in JavaScript? 
+	The use of innerHTML very slow: The process of using innerHTML is much slower as its contents as slowly built, also already parsed contents and elements are also re-parsed which takes time.
+	Preserves event handlers attached to any DOM elements: The event handlers do not get attached to the new elements created by setting                                                              innerHTML automatically.
+	To do so one has to keep track of the event handlers and attach it to new elements manually. This may cause a memory leak on some browsers.
+	Content is replaced everywhere: Either you add, append, delete or modify contents on a webpage using innerHTML, all contents is replaced,  
+	also all the DOM nodes inside that element are reparsed and recreated.
+	Appending to innerHTML is not supported: Usually, += is used for appending in JavaScript.
+	But on appending to an Html tag using innerHTML, the whole tag is re-parsed.
+
