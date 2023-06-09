@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background: lightskyblue;
+        }
+        .main{
+            width: 15%;
+            margin: auto;
+        }
+        h1{
+            color: blueviolet;
+        }
+        .input{
+            margin: 10px;
+        }
+        .input label{
+            display: inline-block;
+            width: 50px;
+        }
+        .input input{
+            width: 110px;
+        }
+        button{
+            padding: 4px 10px;
+            background: lightgrey;
+            border: none;
+            margin: 10px;
+            width: 170px;
+     }
+        .re{
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .re p{
+            line-height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>
+            Date Interval
+        </h1>
+        <div class="input">
+            <label for="date">From:</label>
+            <input type="date" name="" id="d1">
+        </div>
+        <div class="input">
+            <label for="date">To:</label>
+            <input type="date" name="" id="d2">
+        </div>
+        <button type="submit" onclick="cal()">submit</button> 
+    <div class="re">
+            <p>Date Interval Between</p>
+            <p><span id="one"></span>        and      <span id="two"></span></p>
+            <span>Is</span><span id="result"></span>
+    </div>
+     </div>
+
+
+    <script type="text/javascript">
+        
+        function cal() {
+            d1 = document.getElementById('d1');
+            d2 = document.getElementById('d2');
+
+
+            dt1 = new Date(d1.value);
+            dt2 = new Date(d2.value);
+            document.getElementById('one').innerHTML= d1.value;
+            document.getElementById('two').innerHTML= d2.value;
+            console.log(d1)
+            function diff_year_month_day(dt1, dt2) {
+
+                var time = (dt2.getTime() - dt1.getTime()) / 1000;
+                var year = Math.abs(Math.round((time / (60 * 60 * 24)) / 365.25));
+                var month = Math.abs(Math.round(time / (60 * 60 * 24 * 7 * 4)));
+                var days = Math.abs(Math.round(time / (3600 * 24)));
+                return "<br> Year :- " + year + "<br>  Month :- " + month + "<br>  Days :-" + days;
+
+            }
+
+            var diff_year_month_day = diff_year_month_day(dt1, dt2)
+            let b =" years months days:- " + diff_year_month_day;
+            let  res=document.getElementById('result').innerHTML = b
+        }
+    </script>
+</body>
+
+</html>
