@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student</title>
+    <link rel="icon" type="fevicon" href="images/R7.jpg">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: lightpink;
+        }
+        h2{
+        padding: 10px;
+        background: lightseagreen;
+        text-align: center;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: white;
+        }
+        .cont{
+            width: 450px;
+            padding: 20px;
+            background: lightpink;
+            margin: 10px auto;
+        }
+        form{
+            border: 1px solid;
+            padding: 20px;
+            box-shadow: 4px 4px 4px  brown;
+        }
+        .main{
+            padding: 5px;
+        }
+        .main label{
+            width: 25%;
+            display: inline-block;
+        }
+        .spe{
+            display: inline-block;
+        }
+        .main .texttt{
+            width: 65%;
+            padding: 3px;
+            border: none;
+            border-radius: 5px;
+        }
+        .btn{
+            background: lightskyblue;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            box-shadow: 3px 3px gray;
+        }
+        .align{
+            display: flex;
+            justify-content: center;
+            margin: 10px auto;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>Student Registration Form</h2>
+    <div class="cont">
+        
+    <form action="" method="POST">
+        <div class="main">
+            <label for="fname">First Name: </label>
+            <input type="text" class="texttt" placeholder="Enter Your First Name"  pattern="[a-zA-Z]{3,6}" title="3 to 6 characters only" required>
+        </div>
+        <div class="main">
+            <label for="last-name">Last Name: </label>
+            <input type="text" class="texttt" placeholder="Enter Your Last Name" required>
+        </div>
+        <div class="main">
+            <label for="mail">Email: </label>
+            <input type="email" class="texttt" placeholder="It Should Contain @ and ." name="" id="" required>
+        </div>
+        <div class="main">
+            <label for="mobile">Mobile: </label>
+            <input type="tel" class="texttt" placeholder="Only 10 Digits are Allowed" name="" id="" maxlength="10" pattern="[0-9]{10}" title="10 digits only" required>
+        </div>
+        <div class="main">
+            <label for="gender" class="g">Gender:</label>
+            <input type="radio" name="gender" class="x g"> Male   
+            <input type="radio" name="gender" class="x g" > Female <br>
+
+        </div>
+        <div class="main">
+            <label for="dob">Date of Birth:</label>
+            <input type="date" name="dob" id="" class="d" required>
+        </div>
+        <div class="main">
+            <label for="address" >Address: </label>
+            <textarea name="address" class="texttt" id="" cols="40" rows="7" class="t" required></textarea>
+        </div>
+        <div class="main">
+            <label for="city" class="c">City: </label>
+            <input type="text" class="texttt" required>
+        </div>
+        <div class="main">
+            <label for="pin">Area PIN: </label>
+            <input type="text" class="texttt" pattern="[0-9]{6}" title="6 digit only"required>
+        </div>
+        <div class="main">
+            <label for="state">State: </label>
+            <input type="text" class="texttt" required>
+        </div>
+        <div class="main">
+            <label for="qualification" >Qualification: </label>
+            <select  class="texttt">  
+                <option value="Course" >Select Qualification</option>  
+                <option value="BCA">BCA</option>  
+                <option value="BBA">BBA</option>  
+                <option value="B.Tech">B.Tech</option>  
+                <option value="MBA">MBA</option>  
+                <option value="MCA">MCA</option>  
+                <option value="M.Tech">M.Tech</option>  
+              </select>      
+        </div>
+        <div class="main">
+            <label for="specialization:">Specialization: </label>
+            <div class="spe">
+                <input type="checkbox" name="" id="" class="y"> Computer Science<br>
+                <input type="checkbox" name="" id="" class="y"> Information Technology<br> 
+                <input type="checkbox" name="" id="" class="y"> Computer Architecture<br>
+                <input type="checkbox" name="" id="" class="y"> Tele Communication<br>
+              </div>
+        </div>
+        <div class="main">
+            <label for="pwd" class="p">Password: </label>
+            <input type="password" class="texttt" name="" id=""  required>
+        </div>
+        <div class="align">        <input type="submit" value="Registerd" class="btn"></div>
+        </div>
+    </form>
+    </div>
+</body>
+</html>
