@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Now</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .header
+    {
+        position: relative;
+    }
+    .img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        background: url(./image/one.png);
+        background-size: contain;
+        background-attachment: fixed;
+        background-position: center;
+        opacity: 0.6;
+    }
+    .img2{
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        height: 600px;
+        width: 40%;
+        background: url(./image/two.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        
+    }
+    .contain{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 60%;
+        color: orangered;
+        font-weight: bolder;
+        padding: 170px 100px;
+        text-align: left;
+    }
+    .contain h1{
+        color: aqua;
+        font-family: monospace;
+    }
+    .contain h3{
+        color: lime;
+    }
+    .main{
+            padding: 5px;
+        }
+        .main label{
+            width: 35%;
+            display: inline-block;
+            font-size: 18px;
+            padding: 5px;
+        }
+
+        .check{
+            text-align: left;
+        }
+        .spe{
+            display: inline-block;
+            text-align: left;
+            margin-left: 20px;
+        }
+        .main .texttt{
+            margin-left: 20px;
+            width: 45%;
+            padding: 3px;
+            background: inherit;
+            border: 1px solid lightpink;
+            border-radius: 5px;
+        }
+        #datee, #typee,#timee{
+            display: none;
+        }
+        .btn{
+            background: lightskyblue;
+            padding: 10px 50px;
+            border: none;
+            border-radius: 20px;
+            box-shadow: 3px 3px gray;
+        }
+        .align{
+            display: flex;
+            justify-content: center;
+            margin: 10px auto;
+        }
+</style>
+<body>
+    <div class="header">
+        <div class="img"></div>
+        <div class="contain">
+                <h1>Find your table for any occasion</h1>
+                <h3>an unrivaled selection of restorants for whatever you want</h3>
+                <form action="" method="POST">
+                    <div class="main">
+                        <label for="fname">First Name: </label>
+                        <input type="text" class="texttt" placeholder="Enter Your First Name"  pattern="[a-zA-Z]{3,6}" title="3 to 6 characters only" required>
+                    </div>
+                    <div class="main">
+                        <label for="last-name">Last Name: </label>
+                        <input type="text" class="texttt" placeholder="Enter Your Last Name" required>
+                    </div>
+                    <div class="main">
+                        <label for="last-name">Mobile No: </label>
+                        <input type="number" class="texttt" placeholder="Enter Your Mobile Number" required>
+                    </div>
+                    
+                    <div class="main">
+                        <label for="mail">Email: </label>
+                        <input type="email" class="texttt" placeholder="It Should Contain @ and ." name="" id="" required>
+                    </div>
+                    
+                    <div class="main">
+                        <label for="qualification" >Choice of booking: </label>
+                        <select  class="texttt" id="crs" onchange="ccc()">  
+                            <option value="Course" >Select Choice of Booking</option>  
+                            <option value="full" class="course">Full Day Booking</option>  
+                            <option value="half" class="course">Half Day Booking</option>  
+                            <option value="hour" class="course">Hourly Day Booking</option>  
+                          </select>      
+                    </div>
+                    <div class="main" id="datee">
+                        <label for="dob">Date of Birth:</label>
+                        <input type="date" name="dob" id="" class="texttt" required>
+                    </div>
+                    <div class="main check" id="typee">
+                        <label for="specialization:">Type: </label>
+                        <div class="spe">
+                            <input type="checkbox" name="" id="" class="y"> Breakfast<br>
+                            <input type="checkbox" name="" id="" class="y"> Lunch<br> 
+                            <input type="checkbox" name="" id="" class="y"> Dinner<br>
+                          </div>
+                    </div>
+                    <div class="main" id="timee">
+                        <label for="appt">Select a time:</label>
+                        <input type="time" class="texttt" id="appt" name="appt">
+                    </div>
+                    <div class="align">
+                        <input type="submit" value="Book Now" class="btn"></div>
+                    </div>
+                </form>
+        </div>
+        <div class="img2"></div>
+    </div>
+
+
+    <script>
+        
+        function ccc(){
+        let crs = document.getElementById('crs').value;
+        console.log(crs)
+            if (crs == "full"){
+                let datee = document.getElementById('datee')
+                datee.style.display="block";
+            }
+            else
+            if (crs == "half"){
+                let datee = document.getElementById('datee')
+                datee.style.display="block";
+                let typee = document.getElementById('typee')
+                typee.style.display="block";
+                
+            }
+            else{
+                let datee = document.getElementById('datee')
+                datee.style.display="block";
+                let typee = document.getElementById('typee')
+                typee.style.display="block";
+                let time = document.getElementById('timee')
+                time.style.display="block";
+            }
+    
+    }   
+
+
+
+
+
+    </script>
+</body>
+</html>
