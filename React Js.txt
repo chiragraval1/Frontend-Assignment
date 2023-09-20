@@ -1,0 +1,70 @@
+				React Js Module : 9
+1. What is React Js?
+React is a JavaScript library created by Facebook
+React is a User Interface (UI) library
+React is a tool for building UI components
+
+2.What is NPM in React Js?
+npm is the world's largest Software Library (Registry)
+npm is also a software Package Manager and Installer
+npm can manage dependencies.
+npm can (in one command line) install all the dependencies of a project.
+Dependencies are also defined in package.json.
+
+3. What is Role of Node Js in react Js?
+React js uses Node.js, a JavaScript runtime, to build your JavaScript code. Node.js is a server-side JavaScript runtime environment. React js ships with some tools that are written for Node.js. 
+Node.js is an open source platform built on Chrome's JavaScript runtime; it offers a way to easily build fast, scalable programs.
+
+4. What is CLI command In React Js?
+Command-line interfaces (CLIs) built-in Node. js authorize automating repetitive tasks while leveraging the Node. js ecosystem. Package managers like npm and yarn are distributed and ingested across multiple platforms
+
+5. What is Components in React Js?
+Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML.
+Components come in two types, Class components and Function components.
+
+6. What is Header and Content Components in React Js? 
+Headers are compositions that extend standard navbar functionalities. They contain additional components like a jumbotron, sub-navbar, or image covers which serve as a containers for extra navigation elements - usually links, forms, or call-to-action buttons.
+
+
+7. How to install React Js on Windows, Linux Operating System? How to Install NPM and How to check version of NPM? 
+⇒Step 1: Install Node.js installer for windows. Click on this link. Here install the LTS version (the one present on the left). Once downloaded open NodeJS without disturbing other settings, click on the Next button until it’s completely installed. 
+=>Step 2: Open command prompt  to check whether it is completely installed or not type the command –> 
+node -v
+If the installation went well it will give you the version you have installed  
+=>Step 3: Now in the terminal run the below command: 
+npm install -g create-react-app 
+Installation will take few seconds 
+It will globally install react app for you. To check everything  went well run the command  
+create-react-app --version
+If everything went well it will give you the installed version of react app
+=>Step 4:Now Create a new folder where you want to make your react app using the below command: 
+mkdir newfolder
+Note: The newfolder in the above command is the name of the folder and can be anything.
+Move inside the same folder using the below command:
+cd newfolder (your folder name)
+=>Step 5: Now inside this folder run the command –>
+create-react-app reactfirst YOUR_APP_NAME
+It will take some time to install the required dependencies
+NOTE: Due to npm naming restrictions, names can no longer contain capital letters, thus type your app’s name in lowercase.
+ 
+=>Step 6: Now open the IDE of your choice for eg.  Visual studio code and open the folder where you have installed the react app newfolder (in the above example)  inside the folder you will see your app’s name reactapp (In our example). Use the terminal and move inside your app name folder.Use command  cd reactapp (your app name)
+Step 7: To start your app run the below command :
+npm start 
+Once you run the above command a new tab will open in your browser showing React logo :
+
+
+8.How to check version of React Js?
+We can easily check the React version by using the command mentioned below on our command line.
+npm view react version
+
+9. How to change in components of React Js?
+⇒Update in state: The state change can be from a prop or setState change to update a variable(say). The component gets the updated state and React re-renders the component to reflect the change on the app.
+⇒Update in prop: Likewise the change in prop leads to state change and state change leads to re-rendering of the component by React.
+⇒Re-rendering of parent component: Whenever the components render function is called, all its subsequent child components will re-render, regardless of whether their props have changed or not.
+
+10. How to Create a List View in React Js? 
+React Native provides a suite of components for presenting lists of data. Generally, you'll want to use either FlatList or SectionList.
+The FlatList component displays a scrolling list of changing, but similarly structured, data. FlatList works well for long lists of data, where the number of items might change over time. Unlike the more generic ScrollView, the FlatList only renders elements that are currently showing on the screen, not all the elements at once.
+The FlatList component requires two props: data and renderItem. data is the source of information for the list. renderItem takes one item from the source and returns a formatted component to render.
+This example creates a basic FlatList of hardcoded data. Each item in the data props is rendered as a Text component. The FlatListBasics component then renders the FlatList and all Text components.
+
